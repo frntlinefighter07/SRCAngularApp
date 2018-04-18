@@ -1,0 +1,12 @@
+<div class="row">
+  <h2>Add an entry to see the list populate Angular style</h2>
+</div>
+<div class="row">
+  <app-fields-component class="col-lg-8" [currentIndex] = "clickedIndex" [currentEn] = "currentEntry" (entryAdded)="onEntryAdded($event)" (updateLName)="onLNameUpdated($event)"  (updateFName)="onFNameUpdated($event)" ></app-fields-component>
+  <div class="col-lg-4">
+      <h3 *ngIf="names.length > 1">Click an entry to see its data</h3>
+      <app-address-entries-component class="" *ngFor="let name of displayNames; let i = index" [entry] = "name" (click)="grabIndex(i)"></app-address-entries-component>
+  </div>  
+  
+</div>
+

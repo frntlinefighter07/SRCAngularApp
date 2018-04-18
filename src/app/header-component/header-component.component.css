@@ -1,0 +1,17 @@
+img
+{
+    width: 5%;
+    float: left;
+}
+.page-header
+{
+    font-size: 50em;
+    padding: 1%;
+}
+
+.img-thumbnail
+{
+    width: 5%;
+    margin: 1%;
+    float: left;
+}

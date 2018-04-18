@@ -1,0 +1,48 @@
+<form (keyup)="updateEntryName()">
+  <div class="form-inline">
+    <label for="firstName">First Name</label>
+    <input type="text" class="form-control" id="firstName" [(ngModel)]= "firstName" name="first" [ngClass]="{redBackground: !firstNameValidated}">
+    <label for="lastName">Last Name</label>
+    <input type="text" class="form-control" id="lastName" [(ngModel)]= "lastName" name="last" [ngClass]="{redBackground: !lastNameValidated}">
+  </div>
+  <div class="form-group">
+    <label for="company">Company</label>
+    <input type="text" class="form-control" id="company" [(ngModel)]= "companyName" name="company" [ngClass]="{redBackground: !companyValidated}">
+  </div>
+  <div class="form-group">
+    <label for="streetLine1">Street Line 1</label>
+    <input type="text" class="form-control" id="streetLine1" [(ngModel)]= "streetLine1" name="street1" [ngClass]="{redBackground: !street1Validated}">
+  </div>
+  <div class="form-group">
+    <label for="streetLine2">Street Line 2</label>
+    <input type="text" class="form-control" id="streetLine2" [(ngModel)]= "streetLine2" name="street2">
+  </div>
+  <div class="form-inline">
+    <label for="city">City</label>
+    <input type="text" class="form-control" id="city" [(ngModel)]= "city" name="cityName" [ngClass]="{redBackground: !cityValidated}">
+    <label for="state">State</label>
+    <input type="text" class="form-control" id="state" [(ngModel)]= "state" name="state" [ngClass]="{redBackground: !stateValidated}">
+    <label for="zip">Zip</label>
+    <input type="text" class="form-control" id="zip"  [(ngModel)]= "zip" name="zip" [ngClass]="{redBackground: !zipValidated}">
+  </div>
+  <div class="form-group">
+    <label for="entryName">Entry Name</label>
+    <input type="text" class="form-control" id="entryName" [(ngModel)] = "entryName" name="entryName" [ngClass]="{redBackground: !entryNameValidated}">
+  </div>
+</form>
+<div class="btns">
+  <button class="btn btn-primary" (click)="onEntry()">Submit</button>
+  <button class="btn btn-primary" (click)="clearFields()">Clear</button>
+</div>
+<p *ngIf="!firstNameValidated"[ngClass]="{redText: !firstNameValidated}">*Please type a valid first name(a-z, A-Z)</p>
+<p *ngIf="!lastNameValidated" [ngClass]="{redText: !lastNameValidated}">*Please type a valid last name(a-z, A-Z)</p>
+<p *ngIf="!companyValidated"  [ngClass]="{redText: !companyValidated}">*Please type a valid company(a-z, A-Z)</p>
+<p *ngIf="!street1Validated" [ngClass]="{redText: !streetValidated}">*Please type a valid street address(a-z, A-Z, #)</p>
+<p *ngIf="!cityValidated" [ngClass]="{redText: !cityValidated}">*Please type a valid city(a-z, A-z)</p>
+<p *ngIf="!stateValidated"  [ngClass]="{redText: !stateValidated}">*Please type a valid two character state(MO, WA)</p>
+<p *ngIf="!zipValidated"  [ngClass]="{redText: !zipValidated}">*Please type a valid 5 digit zip(#####)</p>
+
+
+
+
+

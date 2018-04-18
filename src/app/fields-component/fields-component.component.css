@@ -1,0 +1,40 @@
+label
+{
+    font-family: 'Roboto Mono', Helvetica, sans-serif;
+}
+button
+{
+    background-color: red;
+    display: inline-block;
+    margin: auto;
+    font-family: 'Roboto Mono', Helvetica, sans-serif;
+}
+
+button:hover, button:focus
+{
+    background-color: tomato;
+}
+
+input
+{
+    margin: 0.5%;
+}
+
+.redText
+{
+    color: red;
+}
+
+.redBackground
+{
+    color: white;
+    background-color: red;
+}
+
+.btns
+{
+    margin: auto;
+    text-align: center;
+}
+
+
